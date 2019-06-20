@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Stylish Slider  - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    
+#first-slider .main-container {
+  padding: 0;
+}
+
+
+#first-slider .slide1 h3, #first-slider .slide2 h3, #first-slider .slide3 h3, #first-slider .slide4 h3{
+    color: #fff;
+    font-size: 36px;
+      text-transform: uppercase;
+	  font-family: 'monda', sans-serif !important;
+	  font-weight:bold;
+	  letter-spacing:4.1 !important;
+}
+
+#first-slider .slide1 h4,#first-slider .slide2 h4,#first-slider .slide3 h4,#first-slider .slide4 h4{
+    color: #fff;
+    font-size: 22px;
+      text-transform: uppercase;
+      font-family: 'gotham', sans-serif !important;
+	  letter-spacing: 3px;
+	     text-shadow: 3px 3px 4px #1b1b1b; 
+
+}
+#first-slider .slide1 .text-left ,#first-slider .slide3 .text-left{
+    padding-left: 40px;
+}
+
+
+#first-slider .carousel-indicators {
+  bottom: 0;
+}
+#first-slider .carousel-control.right,
+#first-slider .carousel-control.left {
+  background-image: none;
+}
+#first-slider .carousel .item {
+      height: 662px;
+    width: 100%;
+    background-size: cover;
+}
+
+.carousel-inner .item .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+#first-slider h3{
+  animation-delay: 1s;
+}
+#first-slider h4 {
+  animation-delay: 2s;
+}
+#first-slider h2 {
+  animation-delay: 3s;
+}
+
+
+#first-slider .carousel-control {
+    width: 6%;
+        text-shadow: none;
+}
+
+
+#first-slider h1 {
+  text-align: center;  
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#first-slider .p {
+  padding-top: 125px;
+  text-align: center;
+}
+
+#first-slider .p a {
+  text-decoration: underline;
+}
+#first-slider .carousel-indicators li {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255,255,255,.4);
+  border:none;
+}
+#first-slider .carousel-indicators .active{
+    width: 16px;
+    height: 16px;
+    background-color: #f8971c;
+  border:none;
+}
+
+
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.carousel-control .fa-angle-right, .carousel-control .fa-angle-left {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+}
+.carousel-control .fa-angle-left{
+    left: 50%;
+    width: 38px;
+    height: 38px;
+    margin-top: -15px;
+    font-size: 30px;
+    color: #fff;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 53px;
+}
+.carousel-control .fa-angle-right{
+    right: 50%;
+    width: 38px;
+    height: 38px;
+    margin-top: -15px;
+    font-size: 30px;
+    color: #fff;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 53px;
+}
+.carousel-control {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+#first-slider .slide1 {
+    background-image: url(https://i.imgur.com/Q6Pmkqt.jpg);
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide2 {
+  background-image: url(https://i.imgur.com/XUCpOph.jpg);
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide3 {
+  background-image:  url(https://i.imgur.com/UsrKH9G.jpg);
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide4 {
+  background-image: url(https://i.imgur.com/0H4mAsV.jpg);
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+      
+}
+@media screen and (max-width: 640px){
+      
+}    </style>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
+<body>
+    <link rel="stylesheet" href="css/animate.min.css">
+
+<div id="first-slider">
+    <div id="carousel-example-generic" class="carousel slide carousel-fade">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" style="height:450px;" role="listbox">
+            <!-- Item 1 -->
+            <div class="item active slide1">
+            <div class="row"><div class="container">
+                    <div class="col-md-5 text-left">
+                      <img style="max-width: 300px;" data-animation="animated zoomInLeft" src="https://i.imgur.com/0o2gXgw.jpg">
+                     </div>
+                    <div class="col-md-7 text-right">
+                    
+                     <h3 data-animation="animated fadeIn">ΧΑΛΚΙΔΙΚΗ</h3>
+                        <h4 data-animation="animated fadeIn">Η Χαλκιδική είναι περιοχή της Μακεδονίας και γεωγραφικά αποτελεί την απόληξη της Κεντρικής Μακεδονίας στο Αιγαίο πέλαγος<a href="https://greece-traveller.blogspot.com/2019/03/blog-post.html">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</a>
+</h4>
+                        
+                    </div>  
+                </div></div>
+                
+             </div> 
+            <!-- Item 2 -->
+            <div class="item slide2">
+             
+                
+                <div class="row"><div class="container">
+                    <div class="col-md-7 text-left">
+                        <h3 data-animation="animated fadeIn">ΚΑΛΑΒΡΥΤΑ</h3>
+                        <h4 data-animation="animated fadeIn">Τα Καλάβρυτα είναι μικρή ορεινή κωμόπολη του Νομού Αχαΐας. Είναι χτισμένα στα Αροάνια Όρη (Χελμό) σε υψόμετρο 735 μέτρων. <a href="https://greece-traveller.blogspot.com/2019/01/blog-post_60.html">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</a> </h4>
+                     </div>
+                    <div class="col-md-5 text-right">
+                        <img data-animation="animated zoomInLeft" src="https://i.imgur.com/vH2fW0k.jpg" width="400">
+                    </div>     
+                </div></div>
+            </div>
+            <!-- Item 3 -->
+            <div class="item slide3">
+                <div class="row"><div class="container">
+                    <div class="col-md-12">
+                        <h3 data-animation="animated fadeIn" class="text-center">ΒΕΛΟΥΧΙ</h3>
+                        <h4 data-animation="animated fadeIn" class="text-center">Ο Τυμφρηστός ή Βελούχι είναι βουνό της Στερεάς Ελλάδας. Έχει υψόμετρο 2.315 μέτρα και καταλαμβάνει μεγάλο τμήμα των νομών Ευρυτανίας και Φθιώτιδας.<a href="https://greece-traveller.blogspot.com/2019/01/blog-post_24.html">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</a></h4>
+                     </div>
+                      <div class="col-md-5 text-right">
+                        <img data-animation="animated zoomInLeft" src="https://i.imgur.com/8rIzkJi.jpg" width="400">
+                    </div>
+                </div></div>
+            </div>
+            <!-- Item 4 -->
+            <div class="item slide4">
+                <div class="row"><div class="container">
+                    <div class="col-md-5 text-left">
+                        <img data-animation="animated zoomInLeft" src="https://i.imgur.com/0QVUbvo.jpg" width="200">
+                     </div>
+                    <div class="col-md-7 text-right">
+                    
+                     <h3 data-animation="animated fadeIn">ΧΑΝΙΑ ΠΗΛΙΟΥ </h3>
+                        <h4 data-animation="animated fadeIn">Τα Χάνια Πηλίου είναι ορεινός οικισμός του νομού Μαγνησίας. Είναι χτισμένα σε υψόμετρο 1.190 μέτρων στις πλαγιές του Πηλίου και αποτελούν τον ορεινότερο οικισμό του νομού Μαγνησίας.<a href="https://greece-traveller.blogspot.com/2019/01/blog-post_50.html">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</a>
+</h4>
+                       
+                    </div>  
+                </div></div>
+            </div>
+            <!-- End Item 4 -->
+    
+        </div>
+        <!-- End Wrapper for slides-->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i><span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>	<script type="text/javascript">
+	(function( $ ) {
+
+    //Function to animate slider captions 
+    function doAnimations( elems ) {
+		//Cache the animationend event in a variable
+		var animEndEv = 'webkitAnimationEnd animationend';
+		
+		elems.each(function () {
+			var $this = $(this),
+				$animationType = $this.data('animation');
+			$this.addClass($animationType).one(animEndEv, function () {
+				$this.removeClass($animationType);
+			});
+		});
+	}
+	
+	//Variables on page load 
+	var $myCarousel = $('#carousel-example-generic'),
+		$firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+		
+	//Initialize carousel 
+	$myCarousel.carousel();
+	
+	//Animate captions in first slide on page load 
+	doAnimations($firstAnimatingElems);
+	
+	//Pause carousel  
+	$myCarousel.carousel('pause');
+	
+	
+	//Other slides to be animated on carousel slide event 
+	$myCarousel.on('slide.bs.carousel', function (e) {
+		var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+		doAnimations($animatingElems);
+	});  
+    $('#carousel-example-generic').carousel({
+        interval:3000,
+        pause: "false"
+    });
+	
+})(jQuery);	
+	</script>
+</body>
+</html>
