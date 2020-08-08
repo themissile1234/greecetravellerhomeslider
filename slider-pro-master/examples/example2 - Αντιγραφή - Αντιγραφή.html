@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Slider Pro</title>
+
+<link rel="stylesheet" type="text/css" href="../dist/css/slider-pro.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="../libs/fancybox/jquery.fancybox.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="../libs/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.sliderPro.min.js"></script>
+<script type="text/javascript" src="../libs/fancybox/jquery.fancybox.pack.js"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example2' ).sliderPro({
+			width: 300,
+			height: 300,
+			visibleSize: '100%',
+			forceSize: 'fullWidth',
+			autoSlideSize: true
+		});
+
+		// instantiate fancybox when a link is clicked
+		$( ".slider-pro" ).each(function(){
+			var slider = $( this );
+
+			slider.find( ".sp-image" ).parent( "a" ).on( "click", function( event ) {
+				event.preventDefault();
+			
+				if ( slider.hasClass( "sp-swiping" ) === false ) {
+					var sliderInstance = slider.data( "sliderPro" ),
+						isAutoplay = sliderInstance.settings.autoplay;
+
+					$.fancybox.open( slider.find( ".sp-image" ).parent( "a" ), {
+						index: $( this ).parents( ".sp-slide" ).index(),
+						afterShow: function() {
+							if ( isAutoplay === true ) {
+								sliderInstance.settings.autoplay = false;
+								sliderInstance.stopAutoplay();
+							}
+						},
+						afterClose: function() {
+							if ( isAutoplay === true ) {
+								sliderInstance.settings.autoplay = true;
+								sliderInstance.startAutoplay();
+							}
+						}
+							
+					});
+				}
+			});
+		});
+	});
+</script>
+<style>
+.fifth {
+  border-color: #0080ff;
+  border-radius: 0;
+  color: #0080ff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.fifth:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: #0080ff;
+  z-index: -1;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+.fifth:hover {
+  color: #fff;
+}
+.fifth:hover:after {
+  width: 110%;
+}
+
+</style>
+</head>
+
+<body>
+
+	<div id="example2" class="slider-pro">
+		<div class="sp-slides">
+			<div class="sp-slide">
+				<a href="https://www.manessistravel.gr/_storageWeb_/n/17631568535035/b/692033667068/Halkidiki_4.jpeg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://www.manessistravel.gr/_storageWeb_/n/17631568535035/b/692033667068/Halkidiki_4.jpeg" 
+						data-retina="https://www.manessistravel.gr/_storageWeb_/n/17631568535035/b/692033667068/Halkidiki_4.jpeg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΧΑΛΚΙΔΙΚΗ <button onclick="window.location.href='https://greece-traveller.blogspot.com/2020/07/blog-post.html'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+
+	        <div class="sp-slide">
+				<a href="https://upload.wikimedia.org/wikipedia/commons/5/51/Platamon_-_View.JPG">
+	        		<img class="sp-image" src="../src/css/images/blank.gif" 
+	        			data-src="https://upload.wikimedia.org/wikipedia/commons/5/51/Platamon_-_View.JPG" 
+	        			data-retina="https://upload.wikimedia.org/wikipedia/commons/5/51/Platamon_-_View.JPG"/>
+	        	</a>
+	        	<p class="sp-caption"><font size="5">ΠΛΑΤΑΜΩΝΑΣ ΠΙΕΡΡΙΑΣ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+			<div class="sp-slide">
+				<a href="https://www.startmediacorfu.gr/wp-content/uploads/2019/11/corfuT-3.jpg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://www.startmediacorfu.gr/wp-content/uploads/2019/11/corfuT-3.jpg" 
+						data-retina="https://www.startmediacorfu.gr/wp-content/uploads/2019/11/corfuT-3.jpg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΚΕΡΚΥΡΑ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+			<div class="sp-slide">
+				<a href="https://money-tourism.gr/wp-content/uploads/2016/12/pilio.jpg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://money-tourism.gr/wp-content/uploads/2016/12/pilio.jpg" 
+						data-retina="https://money-tourism.gr/wp-content/uploads/2016/12/pilio.jpg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΠΗΛΙΟ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+			<div class="sp-slide">
+				<a href="https://www.naxosagiaanna.com/images/gal/naxos-agia-anna-1.jpg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://www.naxosagiaanna.com/images/gal/naxos-agia-anna-1.jpg" 
+						data-retina="https://www.naxosagiaanna.com/images/gal/naxos-agia-anna-1.jpg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΝΑΞΟΣ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+			<div class="sp-slide">
+				<a href="https://www.e-travelbook.gr/media/k2/items/cache/267b1948fa84309bc99f9c0289cabe44_XL.jpg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://www.e-travelbook.gr/media/k2/items/cache/267b1948fa84309bc99f9c0289cabe44_XL.jpg" 
+						data-retina="https://www.e-travelbook.gr/media/k2/items/cache/267b1948fa84309bc99f9c0289cabe44_XL.jpg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΠΑΡΟΣ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+			<div class="sp-slide">
+				<a href="https://www.travelstyle.gr/wp-content/uploads/2018/06/%CF%82%CF%82%CF%82%CF%82-2.jpg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://www.travelstyle.gr/wp-content/uploads/2018/06/%CF%82%CF%82%CF%82%CF%82-2.jpg" 
+						data-retina="https://www.travelstyle.gr/wp-content/uploads/2018/06/%CF%82%CF%82%CF%82%CF%82-2.jpg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΜΗΛΟΣ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+			
+
+			<div class="sp-slide">
+				<a href="https://www.iefimerida.gr/sites/default/files/archive-files/ios_3.jpg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://www.iefimerida.gr/sites/default/files/archive-files/ios_3.jpg" 
+						data-retina="https://www.iefimerida.gr/sites/default/files/archive-files/ios_3.jpg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΙΟΣ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+			<div class="sp-slide">
+				<a href="https://www.gozakynthos.gr/zante.photos/solomos-square-zakynthos-zante-11365586058.jpg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://www.gozakynthos.gr/zante.photos/solomos-square-zakynthos-zante-11365586058.jpg" 
+						data-retina="https://www.gozakynthos.gr/zante.photos/solomos-square-zakynthos-zante-11365586058.jpg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΖΑΚΥΝΘΟΣ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+			<div class="sp-slide">
+				<a href="https://www.autotriti.gr/touring/jpg/proorismoi/1600/69/folegandros_xora.jpg">
+					<img class="sp-image" src="../src/css/images/blank.gif" 
+						data-src="https://www.autotriti.gr/touring/jpg/proorismoi/1600/69/folegandros_xora.jpg" 
+						data-retina="https://www.autotriti.gr/touring/jpg/proorismoi/1600/69/folegandros_xora.jpg"/>
+				</a>
+				<p class="sp-caption"><font size="5">ΦΟΛΕΓΑΝΔΡΟΣ <button onclick="window.location.href='#'"class="btn fifth">ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ</font></button></p>
+			</div>
+
+		</div>
+    </div>
+
+</body>
+</html>
