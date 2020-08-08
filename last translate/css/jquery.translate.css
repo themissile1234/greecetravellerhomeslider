@@ -1,0 +1,27 @@
+.translate-flag-pt{
+  background-image: url('flags/pt.png');
+  width: 16px;
+  height: 11px;
+  display: inline-block;
+}
+
+.translate-flag-en{
+  background-image:url('flags/us.png');
+  width: 16px;
+  height: 11px;
+  display: inline-block;
+}
+
+.translate-item-class{
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+
+.translate-loading{
+  background-image:url('img/ajax-loader.gif');
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 10px;
+}

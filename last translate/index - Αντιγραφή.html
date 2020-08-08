@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/jquery.translate.css">
+</head>
+<body>
+    <div id="translate-area"></div>
+    <h1 data-translate="title"></h1>
+    <button data-translate="title"></button>
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+     <script type="text/javascript" src="js/jquery.translate.js"></script>
+
+     <script>
+        $(function(){
+          $("body").translate({
+            initLang:'pt_PT',
+            creationCompleted: function(el){
+
+            },
+            translateComplete: function(el){
+            }
+          });
+        });
+     </script>
+</body>
+</html>
