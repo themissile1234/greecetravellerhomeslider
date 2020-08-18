@@ -1,0 +1,32 @@
+body {
+  line-height: 1.45;
+  -webkit-transition: font-size 0.3s ease;
+  -moz-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+
+header {
+  padding: 2em 0;
+}
+
+.wrap {
+  max-width: 67%;
+  margin: 0 auto;
+}
+
+#font-adjust-controls {
+  padding: 10px;
+  position: relative;
+}
+
+#font-adjust-size {
+  position: absolute;
+  display: block;
+  width: 3em;
+  text-align: center;
+  padding: 5px;
+  background: #222;
+  color: #fff;
+  top: 15%;
+  right: 100%;
+}
